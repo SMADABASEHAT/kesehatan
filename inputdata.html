@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Indeks Massa Tubuh (IMT)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color:#8d44bd ; */
+            background-image: url("spombob.png");
+            
+
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #333;
+        }
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            /* background-color: #8d44bd; */
+
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b5c1b5;
+        }
+        .result, .advice {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kalkulator Indeks Massa Tubuh (IMT)</h2>
+        <p>Masukkan tinggi, berat badan, usia, dan jenis kelamin Anda untuk mengetahui IMT dan pola hidup yang disarankan.</p>
+        
+        <label for="height">Tinggi Badan (cm):</label>
+        <input type="number" id="height" placeholder="Contoh: 170" required>
+        
+        <label for="weight">Berat Badan (kg):</label>
+        <input type="number" id="weight" placeholder="Contoh: 65" required>
+
+        <label for="age">Usia:</label>
+        <input type="number" id="age" placeholder="Contoh: 25" required>
+        
+        <label for="gender">Jenis Kelamin:</label>
+        <select id="gender" required>
+            <option value="male">Laki-laki</option>
+            <option value="female">Perempuan</option>
+        </select>
+
+        <button onclick="calculateBMI()">Hitung IMT</button>
+        
+        <div class="result" id="result"></div>
+        <div class="advice" id="advice"></div>
+    </div>
+    
+    <script>
+        function calculateBMI() {
+            const height = document.getElementById("height").value;
+            const weight = document.getElementById("weight").value;
+            const age = document.getElementById("age").value;
+            const gender = document.getElementById("gender").value;
+            const result = document.getElementById("result");
+            const advice = document.getElementById("advice");
+            
+            if (height > 0 && weight > 0 && age > 0) {
+                const heightInMeters = height / 100;
+                const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
+
+                let category = "";
+                let recommendation = "";
+
+                // Kategori berdasarkan IMT dan usia
+                if (bmi < 18.5) {
+                    category = "Kurus";
+                    recommendation = "Disarankan untuk meningkatkan asupan kalori dan memperbanyak nutrisi. Konsultasikan dengan ahli gizi untuk pola makan yang tepat.";
+                    window.location.href = "kurus.html"; // Redirect to kurus.html
+                } else if (bmi >= 18.5 && bmi <= 24.9) {
+                    category = "Normal";
+                    recommendation = "Anda memiliki berat badan ideal! Lanjutkan pola hidup sehat, seimbang, dan tetap aktif berolahraga.";
+                    window.location.href = "normal.html"; // Redirect to normal.html
+                } else if (bmi >= 25 && bmi <= 29.9) {
+                    category = "Gemuk";
+                    recommendation = "Disarankan untuk menjaga pola makan dan mulai berolahraga secara rutin. Hindari makanan tinggi gula dan lemak.";
+                    window.location.href = "gemuk.html"; // Redirect to kelebihan.html
+                } else if (bmi >= 30) {
+                    category = "Obesitas";
+                    recommendation = "Penting untuk mulai mengatur pola makan, mengurangi kalori, dan meningkatkan aktivitas fisik. Konsultasikan dengan profesional kesehatan.";
+                    window.location.href = "obesitas.html"; // Redirect to obesitas.html
+                }
+
+                // Penyesuaian saran berdasarkan jenis kelamin
+                if (gender === "female") {
+                    recommendation += " Wanita dianjurkan untuk rutin melakukan olahraga seperti yoga atau aerobik untuk menjaga kesehatan tubuh.";
+                } else {
+                    recommendation += " Pria dianjurkan untuk melakukan latihan kekuatan dan aerobik secara teratur.";
+                }
+
+                result.innerHTML = `IMT Anda: <strong>${bmi}</strong> (${category})`;
+                advice.innerHTML = `<strong>Saran:</strong> ${recommendation}`;
+
+                // Store BMI for later use if needed
+                sessionStorage.setItem("category", category);
+                sessionStorage.setItem("bmi", bmi);
+            } else {
+                result.innerHTML = "Mohon masukkan tinggi, berat badan, dan usia yang valid.";
+                advice.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>
