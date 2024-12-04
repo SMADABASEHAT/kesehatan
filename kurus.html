@@ -150,15 +150,20 @@
     <ul>
         <li>
             <!-- <a href="#Pola Hidup Sehat">Pola Hidup Sehat</a> -->
-            <button id="tombolpolahidupsehat" onclick="functionToggle1()">Pola Hidup Sehat</button>
+            <!-- <button id="tombolpolahidupsehat" onclick="functionToggle1()">Pola Hidup Sehat</button> -->
+            <button onclick="functionToggle('PolaHidupSehat')">Show PolaHidupSehat</button>
+            
         </li>
         <li>
             <!-- <a href="#Makanan & Minuman">Makanan & Minuman</a> -->
-            <button onclick="functionToggle2()">Makanan & Minuman</button>
+            <!-- <button onclick="functionToggle2()">Makanan & Minuman</button> -->
+            <button onclick="functionToggle('MakananMinuman')">Show MakananMinuman</button>
+            
         </li>
         <li>
             <!-- <a href="#Olahraga">Olahraga</a> -->
-            <button onclick="functionToggle3()">Olahraga</button>
+            <!-- <button onclick="functionToggle3()">Olahraga</button> -->
+            <button onclick="functionToggle('Olahraga')">Show Olahraga</button>
         </li>
     </ul>
 </nav>
@@ -275,54 +280,82 @@
 </footer>
 
 <script>
+
+function functionToggle(sectionToShow) {
+    // Get all sections
+    var x = document.getElementById("PolaHidupSehat");
+    var y = document.getElementById("MakananMinuman");
+    var z = document.getElementById("Olahraga");
+
+    // Hide all sections
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+
+    // Show the selected section
+    if (sectionToShow === 'PolaHidupSehat') {
+        x.style.display = "block";
+    } else if (sectionToShow === 'MakananMinuman') {
+        y.style.display = "block";
+    } else if (sectionToShow === 'Olahraga') {
+        z.style.display = "block";
+    }
+}
+
+// Now you can call the function like this:
+// functionToggle('PolaHidupSehat');
+// functionToggle('MakananMinuman');
+// functionToggle('Olahraga');
+
+
     // Function to display category and BMI from session storage
-    function functionToggle1(){
-        var x = document.getElementById("PolaHidupSehat");
-        var y = document.getElementById("MakananMinuman");
-        var z = document.getElementById("Olahraga");
+    // function functionToggle1(){
+    //     var x = document.getElementById("PolaHidupSehat");
+    //     var y = document.getElementById("MakananMinuman");
+    //     var z = document.getElementById("Olahraga");
 
-        if(x.style.display === "none") {
-            x.style.display = "block";
-            y.style.display = "none";
-            z.style.display = "none";
-        } else{
-            x.style.display = "none";
-            y.style.display = "none";
-            z.style.display = "none";
-        }
-    }
+    //     if(x.style.display === "none") {
+    //         x.style.display = "block";
+    //         y.style.display = "none";
+    //         z.style.display = "none";
+    //     } else{
+    //         x.style.display = "none";
+    //         y.style.display = "none";
+    //         z.style.display = "none";
+    //     }
+    // }
 
-    function functionToggle2(){
-        var x = document.getElementById("PolaHidupSehat");
-        var y = document.getElementById("MakananMinuman");
-        var z = document.getElementById("Olahraga");
+    // function functionToggle2(){
+    //     var x = document.getElementById("PolaHidupSehat");
+    //     var y = document.getElementById("MakananMinuman");
+    //     var z = document.getElementById("Olahraga");
 
-        if(x.style.display === "none") {
-            x.style.display = "none";
-            y.style.display = "block";
-            z.style.display = "none";
-        } else{
-            x.style.display = "none";
-            y.style.display = "none";
-            z.style.display = "none";
-        }
-    }
+    //     if(x.style.display === "none") {
+    //         x.style.display = "none";
+    //         y.style.display = "block";
+    //         z.style.display = "none";
+    //     } else{
+    //         x.style.display = "none";
+    //         y.style.display = "none";
+    //         z.style.display = "none";
+    //     }
+    // }
 
-    function functionToggle3(){
-        var x = document.getElementById("PolaHidupSehat");
-        var y = document.getElementById("MakananMinuman");
-        var z = document.getElementById("Olahraga");
+    // function functionToggle3(){
+    //     var x = document.getElementById("PolaHidupSehat");
+    //     var y = document.getElementById("MakananMinuman");
+    //     var z = document.getElementById("Olahraga");
 
-        if(z.style.display === "none") {
-            x.style.display = "none";
-            y.style.display = "none";
-            z.style.display = "block";
-        } else{
-            x.style.display = "none";
-            y.style.display = "none";
-            z.style.display = "none";
-        }
-    }
+    //     if(z.style.display === "none") {
+    //         x.style.display = "none";
+    //         y.style.display = "none";
+    //         z.style.display = "block";
+    //     } else{
+    //         x.style.display = "none";
+    //         y.style.display = "none";
+    //         z.style.display = "none";
+    //     }
+    // }
 
     // function functionToggle2(){
     //     var x = document.getElementById("MakananMinuman");
