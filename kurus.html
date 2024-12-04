@@ -265,38 +265,74 @@
 
 <script>
     // Function to display category and BMI from session storage
+    
+
     function functionToggle1(){
         var x = document.getElementById("PolaHidupSehat");
+        var y = document.getElementById("MakananMinuman");
+        var z = document.getElementById("Olahraga");
 
         if(x.style.display === "none") {
             x.style.display = "block";
+            y.style.display = "none";
+            z.style.display = "none";
         } else{
-            x.style.display = "none";
+            // x.style.display = "none";
         }
 
     }
 
     function functionToggle2(){
-        var x = document.getElementById("MakananMinuman");
+        var x = document.getElementById("PolaHidupSehat");
+        var y = document.getElementById("MakananMinuman");
+        var z = document.getElementById("Olahraga");
 
-        if(x.style.display === "none") {
-            x.style.display = "block";
-        } else{
+        if(y.style.display === "none") {
             x.style.display = "none";
+            y.style.display = "block";
+            z.style.display = "none";
+        } else{
+            // x.style.display = "none";
         }
 
     }
 
     function functionToggle3(){
-        var x = document.getElementById("Olahraga");
+        var x = document.getElementById("PolaHidupSehat");
+        var y = document.getElementById("MakananMinuman");
+        var z = document.getElementById("Olahraga");
 
-        if(x.style.display === "none") {
-            x.style.display = "block";
-        } else{
+        if(z.style.display === "none") {
             x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "block";
+        } else{
+            // x.style.display = "none";
         }
 
     }
+
+    // function functionToggle2(){
+    //     var x = document.getElementById("MakananMinuman");
+
+    //     if(x.style.display === "none") {
+    //         x.style.display = "block";
+    //     } else{
+    //         x.style.display = "none";
+    //     }
+
+    // }
+
+    // function functionToggle3(){
+    //     var x = document.getElementById("Olahraga");
+
+    //     if(x.style.display === "none") {
+    //         x.style.display = "block";
+    //     } else{
+    //         x.style.display = "none";
+    //     }
+
+    // }
 
     function displayCategoryAndBMI() {
         // Get the category and BMI from session storage
