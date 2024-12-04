@@ -137,13 +137,22 @@
 
 <nav>
     <ul>
-        <li><a href="#Pola Hidup Sehat">Pola Hidup Sehat</a></li>
-        <li><a href="#Makanan & Minuman">Makanan & Minuman</a></li>
-        <li><a href="#Olahraga">Olahraga</a></li>
+        <li>
+            <!-- <a href="#Pola Hidup Sehat">Pola Hidup Sehat</a> -->
+            <button onclick="functionToggle1()"></button>
+        </li>
+        <li>
+            <!-- <a href="#Makanan & Minuman">Makanan & Minuman</a> -->
+            <button onclick="functionToggle2()"></button>
+        </li>
+        <li>
+            <!-- <a href="#Olahraga">Olahraga</a> -->
+            <button onclick="functionToggle3()"></button>
+        </li>
     </ul>
 </nav>
 
-<section id="Pola Hidup Sehat" class="section">
+<section id="PolaHidupSehat" class="section">
     <div class="container">
         <h2>Tips Pola Hidup Sehat untuk Anda</h2>
         <p>Jika seseorang kekurangan berat badan, tubuhnya mungkin tidak mendapatkan nutrisi yang dibutuhkan untuk membangun tulang, kulit, dan rambut yang sehat. Tips pola sehat yang dapat Anda lakukan yaitu:
@@ -171,7 +180,7 @@
     </div>
 </section>
 
-<section id="Makanan & Minuman" class="section">
+<section id="MakananMinuman" class="section">
     <div class="container">
         <h2>Rekomendasi Makanan & Minuman Sehat </h2>
         <p>Untuk mencapai berat badan yang ideal, penting untuk menjaga pola makan yang bergizi dan memastikan asupan kalori yang cukup.</p>
@@ -256,6 +265,39 @@
 
 <script>
     // Function to display category and BMI from session storage
+    function functionToggle1(){
+        var x = document.getElementById("PolaHidupSehat");
+
+        if(x.style.display === "none") {
+            x.style.display = "block";
+        } else{
+            x.style.display = "none";
+        }
+
+    }
+
+    function functionToggle2(){
+        var x = document.getElementById("MakananMinuman");
+
+        if(x.style.display === "none") {
+            x.style.display = "block";
+        } else{
+            x.style.display = "none";
+        }
+
+    }
+
+    function functionToggle3(){
+        var x = document.getElementById("Olahraga");
+
+        if(x.style.display === "none") {
+            x.style.display = "block";
+        } else{
+            x.style.display = "none";
+        }
+
+    }
+
     function displayCategoryAndBMI() {
         // Get the category and BMI from session storage
         const category = sessionStorage.getItem('category');
