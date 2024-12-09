@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kurus</title>
+    <title>Normal</title>
     <style>
         /* Reset some default styles */
         * {
@@ -52,15 +52,23 @@
             margin-right: 15px;
         }
 
-        nav ul li a {
+        nav ul li button {
+            background-color: transparent;
+            /* Menghapus background default tombol */
             color: white;
-            text-decoration: none;
+            /* Mengubah warna teks tombol menjadi putih */
+            border: 2px solid white;
+            /* Menambahkan border putih pada tombol */
             font-size: 18px;
-            padding: 10px;
-            transition: background-color 0.3s;
+            padding: 10px 20px;
+            /* Memberikan padding lebih besar untuk tombol */
+            cursor: pointer;
+            /* Menunjukkan kursor pointer saat berada di atas tombol */
+            transition: background-color 0.3s, border-color 0.3s;
+            /* Transisi untuk latar belakang dan border */
         }
 
-        nav ul li a:hover {
+        nav ul li button:hover {
             background-color: #555;
         }
 
