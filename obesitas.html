@@ -138,13 +138,28 @@
 
 <nav>
     <ul>
-        <li><a href="#Pola Hidup Sehat">Pola Hidup Sehat</a></li>
-        <li><a href="#Makanan & Minuman">Makanan & Minuman</a></li>
-        <li><a href="#Olahraga">Olahraga</a></li>
+        <li>
+            <!-- <a href="#Pola Hidup Sehat">Pola Hidup Sehat</a> -->
+            <!-- <button id="tombolpolahidupsehat" onclick="functionToggle1()">Pola Hidup Sehat</button> -->
+            <button onclick="functionToggle('PolaHidupSehat')">Show PolaHidupSehat</button>
+            
+        </li>
+        <li>
+            <!-- <a href="#Makanan & Minuman">Makanan & Minuman</a> -->
+            <!-- <button onclick="functionToggle2()">Makanan & Minuman</button> -->
+            <button onclick="functionToggle('MakananMinuman')">Show MakananMinuman</button>
+            
+        </li>
+        <li>
+            <!-- <a href="#Olahraga">Olahraga</a> -->
+            <!-- <button onclick="functionToggle3()">Olahraga</button> -->
+            <button onclick="functionToggle('Olahraga')">Show Olahraga</button>
+        </li>
     </ul>
 </nav>
 
-<section id="Pola Hidup Sehat" class="section">
+
+<section id="PolaHidupSehat" class="section">
     <div class="container">
         <h2>Tips Pola Hidup Sehat untuk Anda</h2>
         <p>Ingatlah bahwa penurunan berat badan yang sehat adalah proses yang membutuhkan waktu, jadi bersabarlah, nikmati prosesnya dan jangan terlalu keras pada diri sendiri. Tips pola sehat yang dapat anda lakukan yaitu:
@@ -170,7 +185,7 @@
     </div>
 </section>
 
-<section id="Makanan & Minuman" class="section">
+<section id="MakananMinuman" class="section">
     <div class="container">
         <h2>Rekomendasi Makanan & Minuman Sehat </h2>
         <p>Diet rendah energi seimbang dengan pengurangan energi 500-1000 Kkal dari kebutuhan sehari, dengan cara:</p>
@@ -248,6 +263,29 @@
 
     // Call the function on page load
     window.onload = displayCategoryAndBMI;
+</script>
+
+<script>
+    function functionToggle(sectionToShow) {
+    // Get all sections
+    var x = document.getElementById("PolaHidupSehat");
+    var y = document.getElementById("MakananMinuman");
+    var z = document.getElementById("Olahraga");
+
+    // Hide all sections
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+
+    // Show the selected section
+    if (sectionToShow === 'PolaHidupSehat') {
+        x.style.display = "block";
+    } else if (sectionToShow === 'MakananMinuman') {
+        y.style.display = "block";
+    } else if (sectionToShow === 'Olahraga') {
+        z.style.display = "block";
+    }
+}
 </script>
 </body>
 </html>
