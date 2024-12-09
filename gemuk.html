@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,6 +46,10 @@
 
         nav ul {
             list-style: none;
+            padding: 0;
+            /* Menghapus padding default pada <ul> */
+            margin: 0;
+            /* Menghapus margin default pada <ul> */
         }
 
         nav ul li {
@@ -52,17 +57,30 @@
             margin-right: 15px;
         }
 
-        nav ul li a {
+        nav ul li button {
+            background-color: transparent;
+            /* Menghapus background default tombol */
             color: white;
-            text-decoration: none;
+            /* Mengubah warna teks tombol menjadi putih */
+            border: 2px solid white;
+            /* Menambahkan border putih pada tombol */
             font-size: 18px;
-            padding: 10px;
-            transition: background-color 0.3s;
+            padding: 10px 20px;
+            /* Memberikan padding lebih besar untuk tombol */
+            cursor: pointer;
+            /* Menunjukkan kursor pointer saat berada di atas tombol */
+            transition: background-color 0.3s, border-color 0.3s;
+            /* Transisi untuk latar belakang dan border */
         }
 
-        nav ul li a:hover {
+        /* Efek saat hover pada tombol */
+        nav ul li button:hover {
             background-color: #555;
+            /* Memberikan latar belakang gelap saat hover */
+            border-color: #555;
+            /* Mengubah warna border menjadi gelap saat hover */
         }
+
 
         .section {
             padding: 30px;
@@ -123,188 +141,245 @@
             font-size: 16px;
         }
 
-        .container li{
+        .container li {
             line-height: 250%;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1 id="health-title">Kesehatan Tubuh: </h1>
-    <p>Rekomendasi Pola Hidup Sehat, Olahraga, serta Makanan & Minuman yang Sesuai Dengan Kondisi Tubuh Anda</p>
-</header>
+    <header>
+        <h1 id="health-title">Kesehatan Tubuh: </h1>
+        <p>Rekomendasi Pola Hidup Sehat, Olahraga, serta Makanan & Minuman yang Sesuai Dengan Kondisi Tubuh Anda</p>
+    </header>
 
-<nav>
-    <ul>
-        <li>
-            <!-- <a href="#Pola Hidup Sehat">Pola Hidup Sehat</a> -->
-            <!-- <button id="tombolpolahidupsehat" onclick="functionToggle1()">Pola Hidup Sehat</button> -->
-            <button onclick="functionToggle('PolaHidupSehat')">Pola Hidup Sehat</button>
-            
-        </li>
-        <li>
-            <!-- <a href="#Makanan & Minuman">Makanan & Minuman</a> -->
-            <!-- <button onclick="functionToggle2()">Makanan & Minuman</button> -->
-            <button onclick="functionToggle('MakananMinuman')">Makanan & Minuman</button>
-            
-        </li>
-        <li>
-            <!-- <a href="#Olahraga">Olahraga</a> -->
-            <!-- <button onclick="functionToggle3()">Olahraga</button> -->
-            <button onclick="functionToggle('Olahraga')">Olahraga</button>
-        </li>
-    </ul>
-</nav>
-
-<section id="PolaHidupSehat" class="section">
-    <div class="container">
-        <h2>Tips Pola Hidup Sehat untuk Anda</h2>
-        <p>Berat badan ideal tentunya menjadi dambaan semua orang. Secara medis, terdapat faktor utama seseorang memiliki berat badan ideal dan sehat, antara lain keseharian konsumsi makanan, waktu dan kualitas tidur, konsumsi obat-obatan, kondisi kesehatan, dan genetik, dan aktivitas fisik. Tips pola sehat yang dapat anda lakukan yaitu:
-        <li>Makan Dalam Porsi Kecil dan Perlahan</li>
-            Sebelum menikmati sebuah makanan, sebaiknya mengganti piring dengan mangkuk yang lebih kecil. Jika tubuh dibiasakan makan dengan porsi yang sedikit, maka jumlah asupan kalori ke dalam tubuh pun akan berkurang sehingga proses diet Anda pun bisa berjalan lancar.   Tidak hanya itu, jadikanlah aktivitas makan secara perlahan menjadi kebiasaan. Hal ini bertujuan untuk mengirimkan sinyal kenyang ke otak sebelum Anda menghabiskan banyak makanan.
-        <li>Konsumsi Makanan yang Tepat</li>
-            Dalam menjalani program penurunan berat badan, Anda tidak harus selalu melakukan diet tanpa nasi dan tidak perlu menghindari makanan yang Anda sukai. Anda hanya perlu membatasi konsumsi makanan tersebut.   Yang paling penting adalah mengonsumsi makanan yang tepat berupa makanan berprotein dan berserat. Beberapa contoh makanan tersebut antara lain putih telur, daging tanpa lemak, makanan laut, kacang-kacangan, sayur, dan buah-buahan.
-        <li>Selalu Sarapan</li>
-            Hal pertama yang harus dilakukan saat memulai proses penurunan berat badan yakni tidak melewatkan waktu sarapan. Dengan sarapan secara rutin, keinginan untuk mengonsumsi makanan-makanan yang tidak sehat akan berkurang. Selain itu, rasa lapar di siang hari juga tidak akan terasa. 
-        <li>Banyak Minum Air Putih</li>
-            Biar berat badan tetap ideal, biasakan untuk banyak minum air putih dalam satu hari. Sebab, asupan cairan bisa membantu melancarkan sistem metabolisme tubuh. Hal ini juga bisa membantu sistem pencernaan lebih lancar dan tubuh bisa membakar lemak lebih banyak. 
-        <li>Istirahat atau Tidur yang cukup</li>
-            Lalu ada Istirahat atau tidur yang cukup, Hal ini membuat tubuh kita lebih fit atau lebih sehat. Karena kita bisa mendapatkan energi dan tenaga yang cukup untuk melakukan kegiatan seharian.
-        <li>Mendapatkan Asupan Vitamin yang cukup</li>
-            Kemudian setelah itu kita butuh asupan vitamin yang cukup untuk menambah daya tahan tubuh agar tidak mudah terserang oleh penyakit.
-        <li>Mengurangi konsumsi Gula</li>
-            Mungkin ini sedikit sulit untuk dilakukan karena setiap minuman yang kita konsumsi 90% mengandung gula. Kita boleh mengonsumsi gula tapi tidak boleh terlalu sering atau terlalu banyak karena salah satu dampaknya dapat menyebabkan penyakit diabetes.
-        <p>Tidak merokok</li>
-            Dalam pola hidup sehat kita sangat dilarang merokok, karena merokok dapat menyebabkan munculnya berbagai penyakit dalam tubuh kita.
-        <li>Tetap memperhatikan dan menjaga Kebersihan lingkungan</li>
-            Dengan kondisi lingkungan yang bersih, hal ini mendukung untuk pola hidup sehat. karena jika lingkungan tidak bersih sudah dipastikan banyak kuman sehingga menyebabkan penyakit.</p>
-        
-        
+    <nav>
         <ul>
-            
-        </ul>
-    </div>
-</section>
+            <li>
+                <!-- <a href="#Pola Hidup Sehat">Pola Hidup Sehat</a> -->
+                <!-- <button id="tombolpolahidupsehat" onclick="functionToggle1()">Pola Hidup Sehat</button> -->
+                <button onclick="functionToggle('PolaHidupSehat')">Pola Hidup Sehat</button>
 
-<section id="MakananMinuman" class="section">
-    <div class="container">
-        <h2>Rekomendasi Makanan & Minuman Sehat </h2>
-        <p>Untuk mencapai berat badan yang ideal, penting untuk menjaga pola makan yang bergizi dan memastikan asupan kalori yang cukup.</p>
-        
+            </li>
+            <li>
+                <!-- <a href="#Makanan & Minuman">Makanan & Minuman</a> -->
+                <!-- <button onclick="functionToggle2()">Makanan & Minuman</button> -->
+                <button onclick="functionToggle('MakananMinuman')">Makanan & Minuman</button>
+
+            </li>
+            <li>
+                <!-- <a href="#Olahraga">Olahraga</a> -->
+                <!-- <button onclick="functionToggle3()">Olahraga</button> -->
+                <button onclick="functionToggle('Olahraga')">Olahraga</button>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="PolaHidupSehat" class="section">
+        <div class="container">
+            <h2>Tips Pola Hidup Sehat untuk Anda</h2>
+            <p>Berat badan ideal tentunya menjadi dambaan semua orang. Secara medis, terdapat faktor utama seseorang
+                memiliki berat badan ideal dan sehat, antara lain keseharian konsumsi makanan, waktu dan kualitas tidur,
+                konsumsi obat-obatan, kondisi kesehatan, dan genetik, dan aktivitas fisik. Tips pola sehat yang dapat
+                anda lakukan yaitu:
+                <li>Makan Dalam Porsi Kecil dan Perlahan</li>
+                Sebelum menikmati sebuah makanan, sebaiknya mengganti piring dengan mangkuk yang lebih kecil. Jika tubuh
+                dibiasakan makan dengan porsi yang sedikit, maka jumlah asupan kalori ke dalam tubuh pun akan berkurang
+                sehingga proses diet Anda pun bisa berjalan lancar. Tidak hanya itu, jadikanlah aktivitas makan secara
+                perlahan menjadi kebiasaan. Hal ini bertujuan untuk mengirimkan sinyal kenyang ke otak sebelum Anda
+                menghabiskan banyak makanan.
+                <li>Konsumsi Makanan yang Tepat</li>
+                Dalam menjalani program penurunan berat badan, Anda tidak harus selalu melakukan diet tanpa nasi dan
+                tidak perlu menghindari makanan yang Anda sukai. Anda hanya perlu membatasi konsumsi makanan tersebut.
+                Yang paling penting adalah mengonsumsi makanan yang tepat berupa makanan berprotein dan berserat.
+                Beberapa contoh makanan tersebut antara lain putih telur, daging tanpa lemak, makanan laut,
+                kacang-kacangan, sayur, dan buah-buahan.
+                <li>Selalu Sarapan</li>
+                Hal pertama yang harus dilakukan saat memulai proses penurunan berat badan yakni tidak melewatkan waktu
+                sarapan. Dengan sarapan secara rutin, keinginan untuk mengonsumsi makanan-makanan yang tidak sehat akan
+                berkurang. Selain itu, rasa lapar di siang hari juga tidak akan terasa.
+                <li>Banyak Minum Air Putih</li>
+                Biar berat badan tetap ideal, biasakan untuk banyak minum air putih dalam satu hari. Sebab, asupan
+                cairan bisa membantu melancarkan sistem metabolisme tubuh. Hal ini juga bisa membantu sistem pencernaan
+                lebih lancar dan tubuh bisa membakar lemak lebih banyak.
+                <li>Istirahat atau Tidur yang cukup</li>
+                Lalu ada Istirahat atau tidur yang cukup, Hal ini membuat tubuh kita lebih fit atau lebih sehat. Karena
+                kita bisa mendapatkan energi dan tenaga yang cukup untuk melakukan kegiatan seharian.
+                <li>Mendapatkan Asupan Vitamin yang cukup</li>
+                Kemudian setelah itu kita butuh asupan vitamin yang cukup untuk menambah daya tahan tubuh agar tidak
+                mudah terserang oleh penyakit.
+                <li>Mengurangi konsumsi Gula</li>
+                Mungkin ini sedikit sulit untuk dilakukan karena setiap minuman yang kita konsumsi 90% mengandung gula.
+                Kita boleh mengonsumsi gula tapi tidak boleh terlalu sering atau terlalu banyak karena salah satu
+                dampaknya dapat menyebabkan penyakit diabetes.
+            <p>Tidak merokok</li>
+                Dalam pola hidup sehat kita sangat dilarang merokok, karena merokok dapat menyebabkan munculnya berbagai
+                penyakit dalam tubuh kita.
+                <li>Tetap memperhatikan dan menjaga Kebersihan lingkungan</li>
+                Dengan kondisi lingkungan yang bersih, hal ini mendukung untuk pola hidup sehat. karena jika lingkungan
+                tidak bersih sudah dipastikan banyak kuman sehingga menyebabkan penyakit.
+            </p>
+
+
+            <ul>
+
+            </ul>
+        </div>
+    </section>
+
+    <section id="MakananMinuman" class="section">
+        <div class="container">
+            <h2>Rekomendasi Makanan & Minuman Sehat </h2>
+            <p>Untuk mencapai berat badan yang ideal, penting untuk menjaga pola makan yang bergizi dan memastikan
+                asupan kalori yang cukup.</p>
+
             <h3>Makanan:</h3>
-        <div class="card">
-            <h4>1. Dada Ayam</h4>
-            <p><strong>Kandungan:</strong> Tidak semua bagian ayam mengandung tinggi lemak, contohnya bagian dada ayam. Bagian dada ayam ini mengandung zat besi dan protein yang tinggi. </p>
-            <p><strong>Olahan:</strong> Dada ayam dapat diolah dengan cara dipanggang atau direbus dan hindari menggorengnya supaya tidak merusak kandungan baiknya.</p>
-        
-            <h4>2. Telur Ayam</h4>
-            <p><strong>Kandungan:</strong> Tak hanya ramah di kantong, telur juga kaya nutrisi seperti protein, vitamin D, dan kolin. Bila ingin lebih sehat lagi, Anda bisa mengonsumsi putih telurnya saja. Umumnya, satu butir putih telur mengandung 406 gram protein sebagai sumber energi. </p>
-            <p><strong>Olahan:</strong> Anda bisa menikmatinya dengan cara direbus. </p>
+            <div class="card">
+                <h4>1. Dada Ayam</h4>
+                <p><strong>Kandungan:</strong> Tidak semua bagian ayam mengandung tinggi lemak, contohnya bagian dada
+                    ayam. Bagian dada ayam ini mengandung zat besi dan protein yang tinggi. </p>
+                <p><strong>Olahan:</strong> Dada ayam dapat diolah dengan cara dipanggang atau direbus dan hindari
+                    menggorengnya supaya tidak merusak kandungan baiknya.</p>
 
-            <h4>3. Kentang</h4>
-            <p><strong>Kandungan:</strong> Kentang mengandung kalium yang menjaga tekanan darah tetap stabil, namun kalorinya pun relatif rendah. Selain itu, kentang juga mengandung vitamin B1, vitamin B9, vitamin C, dan vitamin B6. </p>
-            <p><strong>Olahan:</strong> Olahan kentang dengan cara direbus atau dikukus agar tidak menghilangkan gizinya.</p>
+                <h4>2. Telur Ayam</h4>
+                <p><strong>Kandungan:</strong> Tak hanya ramah di kantong, telur juga kaya nutrisi seperti protein,
+                    vitamin D, dan kolin. Bila ingin lebih sehat lagi, Anda bisa mengonsumsi putih telurnya saja.
+                    Umumnya, satu butir putih telur mengandung 406 gram protein sebagai sumber energi. </p>
+                <p><strong>Olahan:</strong> Anda bisa menikmatinya dengan cara direbus. </p>
 
-            <h4>4. Daging Sapi Tanpa Lemak</h4>
-            <p><strong>Kandungan:</strong> Di dalam daging tanpa lemak ini terkandung protein, zat besi, vitamin, mineral, zinc, dan vitamin B12. </p>
-            <p><strong>Olahan:</strong> Untuk menikmatinya, Anda bisa memasak daging sapi dengan cara direbus, dikukus, atau dipanggang tanpa lemak di atas pan anti lengket.</p>
+                <h4>3. Kentang</h4>
+                <p><strong>Kandungan:</strong> Kentang mengandung kalium yang menjaga tekanan darah tetap stabil, namun
+                    kalorinya pun relatif rendah. Selain itu, kentang juga mengandung vitamin B1, vitamin B9, vitamin C,
+                    dan vitamin B6. </p>
+                <p><strong>Olahan:</strong> Olahan kentang dengan cara direbus atau dikukus agar tidak menghilangkan
+                    gizinya.</p>
 
-            <h4>5. Kacang-kacangan</h4>
-            <p><strong>Kandungan:</strong> Dalam kacang-kacangan terdapat aneka vitamin dan mineral, bahkan zat besi dan folat yang baik untuk mencegah anemia. Selain itu, kacang-kacangan juga tinggi protein dan serat sehingga membuat Anda kenyang lebih lama. Anda bisa memilih kacang kedelai, kacang tanah, atau kacang merah untuk variasi masakan. </p>
-            <p><strong>Olahan:</strong>Olahan kentang dengan cara direbus atau dikukus agar tidak menghilangkan gizinya.</p>
+                <h4>4. Daging Sapi Tanpa Lemak</h4>
+                <p><strong>Kandungan:</strong> Di dalam daging tanpa lemak ini terkandung protein, zat besi, vitamin,
+                    mineral, zinc, dan vitamin B12. </p>
+                <p><strong>Olahan:</strong> Untuk menikmatinya, Anda bisa memasak daging sapi dengan cara direbus,
+                    dikukus, atau dipanggang tanpa lemak di atas pan anti lengket.</p>
+
+                <h4>5. Kacang-kacangan</h4>
+                <p><strong>Kandungan:</strong> Dalam kacang-kacangan terdapat aneka vitamin dan mineral, bahkan zat besi
+                    dan folat yang baik untuk mencegah anemia. Selain itu, kacang-kacangan juga tinggi protein dan serat
+                    sehingga membuat Anda kenyang lebih lama. Anda bisa memilih kacang kedelai, kacang tanah, atau
+                    kacang merah untuk variasi masakan. </p>
+                <p><strong>Olahan:</strong>Olahan kentang dengan cara direbus atau dikukus agar tidak menghilangkan
+                    gizinya.</p>
 
 
+            </div>
+
+            <h3>Minuman:</h3>
+            <div class="card">
+                <h4>1. Smoothies</h4>
+                <p>Smoothies merupakan minuman yang populer karena dapat diisi dengan berbagai macam buah-buahan segar
+                    dan sayuran hijau yang kaya akan serat dan nutrisi. Namun, perlu diperhatikan bahwa tambahan seperti
+                    yogurt, susu, atau pemanis bisa meningkatkan jumlah kalori.</p>
+                <h4>2. Air Kelapa</h4>
+                <p>Air kelapa adalah minuman alami yang rendah kalori dan mengandung banyak elektrolit, seperti kalium
+                    dan magnesium. Satu porsi air kelapa (sekitar 240 ml) biasanya memiliki sekitar 45-60 kalori.Dengan
+                    begitu, menjadikannya pilihan yang menyegarkan dan rendah kalori untuk membantu penurunan berat
+                    badan.</p>
+                <h4>3. Jus Sayuran</h4>
+                <p>Jus tanpa gula juga termasuk jenis minuman yang bisa bikin kurus. Apalagi jika dibuat dari
+                    sayur-sayuran tinggi serat. Jus sayuran memiliki kalori yang lebih sedikit dibandingkan jus buah,
+                    tetapi tetap menyediakan nutrisi penting. Satu cangkir jus tomat memiliki sekitar 41 kalori,
+                    sementara satu cangkir jus jeruk memiliki sekitar 122 kalori. Memilih jus dengan serat akan membantu
+                    mengendalikan rasa lapar</p>
+                <h4>4. Air Putih</h4>
+                <p>Manfaat minum air putih dapat membantu menurunkan berat badan dengan berbagai cara. Sebabnya, air
+                    bisa menekan nafsu makan, meningkatkan metabolisme, dan memaksimalkan olahraga yang kamu lakukan.
+                </p>
+                <h4>5. Teh Hijau</h4>
+                <p>Teh hijau kaya akan antioksidan dan dapat membantu meningkatkan metabolisme.</p>
+            </div>
         </div>
+    </section>
 
-        <h3>Minuman:</h3>
-        <div class="card">
-            <h4>1. Smoothies</h4>
-            <p>Smoothies merupakan minuman yang populer karena dapat diisi dengan berbagai macam buah-buahan segar dan sayuran hijau yang kaya akan serat dan nutrisi. Namun, perlu diperhatikan bahwa tambahan seperti yogurt, susu, atau pemanis bisa meningkatkan jumlah kalori.</p>
-            <h4>2. Air Kelapa</h4>
-            <p>Air kelapa adalah minuman alami yang rendah kalori dan mengandung banyak elektrolit, seperti kalium dan magnesium. Satu porsi air kelapa (sekitar 240 ml) biasanya memiliki sekitar 45-60 kalori.Dengan begitu, menjadikannya pilihan yang menyegarkan dan rendah kalori untuk membantu penurunan berat badan.</p>
-            <h4>3. Jus Sayuran</h4>
-            <p>Jus tanpa gula juga termasuk jenis minuman yang bisa bikin kurus. Apalagi jika dibuat dari sayur-sayuran tinggi serat. Jus sayuran memiliki kalori yang lebih sedikit dibandingkan jus buah, tetapi tetap menyediakan nutrisi penting. Satu cangkir jus tomat memiliki sekitar 41 kalori, sementara satu cangkir jus jeruk memiliki sekitar 122 kalori. Memilih jus dengan serat akan membantu mengendalikan rasa lapar</p>
-            <h4>4. Air Putih</h4>
-            <p>Manfaat minum air putih dapat membantu menurunkan berat badan dengan berbagai cara. Sebabnya, air bisa menekan nafsu makan, meningkatkan metabolisme, dan memaksimalkan olahraga yang kamu lakukan.</p>
-            <h4>5. Teh Hijau</h4>
-            <p>Teh hijau kaya akan antioksidan dan dapat membantu meningkatkan metabolisme.</p>
+    <section id="Olahraga" class="section">
+        <div class="container">
+            <h2>Olahraga yang Direkomendasikan</h2>
+            <p>Melakukan olahraga secara teratur dapat membantu membakar kalori dan meningkatkan kesehatan tubuh secara
+                keseluruhan. Berikut adalah beberapa jenis olahraga yang dapat dilakukan:</p>
+            <ul>
+                <h4>1. Yoga</h4>
+                Yoga merupakan salah satu olahraga yang bermanfaat untuk kesehatan jiwa, karena termasuk relaksasi.
+                Selain itu, melatih dan meningkatkan kelenturan tubuh, melakukan yoga selama 30 menit bisa membakar 150
+                kalori. Yoga juga bisa menekan nafsu makan, sehingga program penurunan berat badan bisa lebih optimal.
+                <h4>2. Berjalan Kaki</h4>
+                Jalan kaki bisa menjadi pilihan untuk menurunkan berat badan, karena berjalan selama 30 menit dapat
+                membakar sekitar 167 kalori. Semakin cepat dan lama Anda berjalan kaki, akan semakin banyak pula kalori
+                yang dibakar.
+                <h4>3. Berenang</h4>
+                berenang selama 30 menit dapat membakar 200-300 kalori dan membantu proses penurunan berat badan.
+                <h4>4. Lari</h4>
+                Jika sudah nyaman dengan kecepatan jalan kaki, Anda bisa meningkatkan kecepatannya menjadi berlari
+                santai atau melakukan jogging. Olahraga ini bisa membakar kalori sebanyak 250-400 kalori selama 30
+                menit, tergantung dari kecepatan dan intensitas Anda.
+                <h4>5. Bersepeda</h4>
+                Baik bersepeda di ruang terbuka, maupun menggunakan sepeda statis, keduanya bermanfaat dalam menurunkan
+                berat badan. Bersepeda statis selama 30 menit dapat membakar 250-300 kalori. Sedangkan bersepeda di luar
+                bisa membakar hingga 400 kalori bila dilakukan selama 30 menit.
+
+
+            </ul>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="Olahraga" class="section">
-    <div class="container">
-        <h2>Olahraga yang Direkomendasikan</h2>
-        <p>Melakukan olahraga secara teratur dapat membantu membakar kalori dan meningkatkan kesehatan tubuh secara keseluruhan. Berikut adalah beberapa jenis olahraga yang dapat dilakukan:</p>
-        <ul>
-            <h4>1. Yoga</h4>
-             Yoga merupakan salah satu olahraga yang bermanfaat untuk kesehatan jiwa, karena termasuk relaksasi. Selain itu, melatih dan meningkatkan kelenturan tubuh, melakukan yoga selama 30 menit bisa membakar 150 kalori. Yoga juga bisa menekan nafsu makan, sehingga program penurunan berat badan bisa lebih optimal.
-            <h4>2. Berjalan Kaki</h4>
-             Jalan kaki bisa menjadi pilihan untuk menurunkan berat badan, karena berjalan selama 30 menit dapat membakar sekitar 167 kalori. Semakin cepat dan lama Anda berjalan kaki, akan semakin banyak pula kalori yang dibakar.
-            <h4>3. Berenang</h4>
-             berenang selama 30 menit dapat membakar 200-300 kalori dan membantu proses penurunan berat badan. 
-            <h4>4. Lari</h4>
-             Jika sudah nyaman dengan kecepatan jalan kaki, Anda bisa meningkatkan kecepatannya menjadi berlari santai atau melakukan jogging. Olahraga ini bisa membakar kalori sebanyak 250-400 kalori selama 30 menit, tergantung dari kecepatan dan intensitas Anda. 
-            <h4>5. Bersepeda</h4>
-             Baik bersepeda di ruang terbuka, maupun menggunakan sepeda statis, keduanya bermanfaat dalam menurunkan berat badan. Bersepeda statis selama 30 menit dapat membakar 250-300 kalori. Sedangkan bersepeda di luar bisa membakar hingga 400 kalori bila dilakukan selama 30 menit.
+    <footer>
+        <p>&copy; 2024 - Kesehatan Tubuh. All Rights Reserved.</p>
+    </footer>
 
+    <script>
+        // Function to display category and BMI from session storage
+        function displayCategoryAndBMI() {
+            // Get the category and BMI from session storage
+            const category = sessionStorage.getItem('category');
+            const bmi = sessionStorage.getItem('bmi');
 
-        </ul>
-    </div>
-</section>
+            // Display the category
+            if (category) {
+                document.getElementById('health-title').innerHTML += category;
+            }
 
-<footer>
-    <p>&copy; 2024 - Kesehatan Tubuh. All Rights Reserved.</p>
-</footer>
+            // Create a new element for BMI
+            const bmiElement = document.createElement('h3');
+            bmiElement.innerText = `BMI Anda: ${bmi}`;
+            bmiElement.style.color = '#28a745'; // Set the color for the BMI
 
-<script>
-    // Function to display category and BMI from session storage
-    function displayCategoryAndBMI() {
-        // Get the category and BMI from session storage
-        const category = sessionStorage.getItem('category');
-        const bmi = sessionStorage.getItem('bmi');
-
-        // Display the category
-        if (category) {
-            document.getElementById('health-title').innerHTML += category;
+            // Append the BMI element below the category title
+            document.getElementById('health-title').appendChild(bmiElement);
         }
 
-        // Create a new element for BMI
-        const bmiElement = document.createElement('h3');
-        bmiElement.innerText = `BMI Anda: ${bmi}`;
-        bmiElement.style.color = '#28a745'; // Set the color for the BMI
+        // Call the function on page load
+        window.onload = displayCategoryAndBMI;
+    </script>
 
-        // Append the BMI element below the category title
-        document.getElementById('health-title').appendChild(bmiElement);
-    }
+    <script>
+        function functionToggle(sectionToShow) {
+            // Get all sections
+            var x = document.getElementById("PolaHidupSehat");
+            var y = document.getElementById("MakananMinuman");
+            var z = document.getElementById("Olahraga");
 
-    // Call the function on page load
-    window.onload = displayCategoryAndBMI;
-</script>
+            // Hide all sections
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "none";
 
-<script>
-    function functionToggle(sectionToShow) {
-    // Get all sections
-    var x = document.getElementById("PolaHidupSehat");
-    var y = document.getElementById("MakananMinuman");
-    var z = document.getElementById("Olahraga");
-
-    // Hide all sections
-    x.style.display = "none";
-    y.style.display = "none";
-    z.style.display = "none";
-
-    // Show the selected section
-    if (sectionToShow === 'PolaHidupSehat') {
-        x.style.display = "block";
-    } else if (sectionToShow === 'MakananMinuman') {
-        y.style.display = "block";
-    } else if (sectionToShow === 'Olahraga') {
-        z.style.display = "block";
-    }
-}
-</script>
+            // Show the selected section
+            if (sectionToShow === 'PolaHidupSehat') {
+                x.style.display = "block";
+            } else if (sectionToShow === 'MakananMinuman') {
+                y.style.display = "block";
+            } else if (sectionToShow === 'Olahraga') {
+                z.style.display = "block";
+            }
+        }
+    </script>
 </body>
+
 </html>
-        
